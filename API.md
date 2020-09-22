@@ -1,46 +1,19 @@
-# kju API
+# KJU
 
-kju is an open communication platform that works on a simple `request <-> response` pattern. 
+kju is a serverless, open communication platform that works on a simple `request <-> response` pattern. The KJU Cloud service is based on the open source kju framework. If you'd like to run it on your system, consider installing the framework on premise.
+
+
+# Fundamentals
 
 * Any participator can create a request with a number of predefined responses.
 * Any participator can redeem a response for a given request
 
-# Basics
-
-...
-
-# Tokens
-
-Being an open and simple platform, kju doesn't require a registration or login. You will, however need tokens for working with the API.
-
-There are different types of tokens:
-
-* ***create token***  for creating messages
-* ***read token*** for reading particular messages (each token is valid for a specific message)
-* ***redeem token*** for redeeming responses for a given message
-* ***seeResponses token*** for viewing the responses for a given message
-
-
-
->  When creating a message, the tokens will be generated and returned!
 
 # API
 
-kju is consumed via a REST API and offers the following endpoints:
+> 👍 For easy adoption and embedding into any system, kju works on some simple but versatile concepts. There are only a small number of API endpoints that do the job.
 
-* `POST /creationToken`
-* `POST /message`
-* `GET /message/:messageId`
-* `GET /message/:messageId/response/:responseId`
-* `GET /message/:messageId/responses`
-
-## (Browser API)
-
-The following two API Endpoints can also be opened int he browser. kju will then render them with a tiny UI.
-
-* `/message/:messageId` 
-
-* `/message/:messageId/responses` 
+> 🔑 For <u>Authentication</u>, kju doesn't rely on annoying registration and login procedures. Instead, a token-based authentification methodology is used. In order to create messages, one must create a token (one-time) first. This token can then be used to create messages. Tokens for viewing and redeeming responses are bound to specific messages and will be generated and returned when a message is created.
 
 
 
@@ -60,7 +33,7 @@ Data:
 
 ## CREATE a message
 
-Creates a message in the kju platform.
+Creates a message in the kju platform and returns the neccessary tokens for viewing and redeeming responses.
 
 ```
 Endpoint: /api/message?token=XXX
@@ -77,7 +50,9 @@ Data:
 
 ## SEE a message
 
-Returns a raw message
+Returns a raw message.
+
+> When opened in the browser, a UI will be rendered.
 
 ```
 Endpoint: /api/message/:messageId?token=XXX
@@ -107,6 +82,8 @@ Returns:
 
 Returns the redeemed responses for a given message
 
+> When opened in the browser, a UI will be rendered.
+
 ```
 Endpoint: /api/message/:messageId/responses?token=XXX
 Method: GET
@@ -119,3 +96,23 @@ Returns:
 	}
 }
 ```
+
+
+# Tokens
+
+Being an open and simple platform, kju doesn't require a registration or login. You will, however need tokens for working with the API.
+
+There are different types of tokens:
+
+* ***create token***  for creating messages
+* ***read token*** for reading particular messages (each token is valid for a specific message)
+* ***redeem token*** for redeeming responses for a given message
+* ***seeResponses token*** for viewing the responses for a given message
+
+
+
+>  When creating a message, the tokens will be generated and returned!
+
+# Use Cases
+
+...
