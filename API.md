@@ -20,19 +20,17 @@ Consuming the service can be done via simple HTTP calls, using standard tools, l
 > 🔑 For <u>Authentication</u>, kju doesn't rely on annoying registration and login procedures. Instead, a token-based authentification methodology is used. In order to create messages, one must create a token (one-time) first. This token can then be used to create messages. Tokens for viewing and redeeming responses are bound to specific messages and will be generated and returned when a message is created.
 
 
+The API (alpha version!) is available under:
 
+`http://europe-west3-spoocloud-202009.cloudfunctions.net/kju-dummy/api`
 
 ## GET a token
 
 Generates a token for creating a message
 
 ```
-Endpoint: /api/token
+Endpoint: /api/creationToken
 Method: POST
-Data:
-{
-	createToken: "XXX"
-}
 Returns:
 {
 	data: "TOKEN"
@@ -94,7 +92,7 @@ Method: GET
 Query Params: token
 Returns:
 {
-	...
+	msg: "ok"
 }
 ```
 
@@ -109,10 +107,11 @@ Endpoint: /api/message/:messageId/responses?token=XXX
 Method: GET
 Query Params: token
 Returns:
-{
-	responseId: {
-		content: "",
-		responses: [{}]
+[
+	{
+		_id: "auto generated id",
+		response: "responseId",
+		timestamp: "ISO-8601"
 	}
-}
+]
 ```
