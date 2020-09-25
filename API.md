@@ -3,10 +3,14 @@
 kju is a serverless, open communication platform that works on a simple `request <-> response` pattern. The KJU Cloud service is based on the open source kju framework. If you'd like to run it on your system, consider installing the framework on premise.
 
 
-# Fundamentals
+## Fundamentals
 
 * Any participator can create a request with a number of predefined responses.
 * Any participator can redeem a response for a given request
+
+## Integrate
+
+Consuming the service can be done via simple HTTP calls, using standard tools, like <u>curl</u>, <u>any http client</u>, <u>web browsers</u> and more
 
 
 # API
@@ -29,6 +33,10 @@ Data:
 {
 	createToken: "XXX"
 }
+Returns:
+{
+	data: "TOKEN"
+}
 ```
 
 ## CREATE a message
@@ -41,6 +49,14 @@ Method: POST
 Query Params: token
 Data:
 {
+	content: "",
+	responses: [{
+
+	}]
+}
+Returns:
+{
+	_id: "auto generated id",
 	content: "",
 	responses: [{
 
@@ -60,7 +76,11 @@ Method: GET
 Query Params: token
 Returns:
 {
-	...
+	_id: "auto generated id",
+	content: "",
+	responses: [{
+
+	}]
 }
 ```
 
@@ -96,23 +116,3 @@ Returns:
 	}
 }
 ```
-
-
-# Tokens
-
-Being an open and simple platform, kju doesn't require a registration or login. You will, however need tokens for working with the API.
-
-There are different types of tokens:
-
-* ***create token***  for creating messages
-* ***read token*** for reading particular messages (each token is valid for a specific message)
-* ***redeem token*** for redeeming responses for a given message
-* ***seeResponses token*** for viewing the responses for a given message
-
-
-
->  When creating a message, the tokens will be generated and returned!
-
-# Use Cases
-
-...
