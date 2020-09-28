@@ -147,7 +147,7 @@ Returns:
 
 Returns the messages matching a messageTag
 
-> the messageTag is encided inside the token. 
+> The messageTag is encoded inside the token. 
 
 > When opened in the browser, a UI will be rendered.
 
