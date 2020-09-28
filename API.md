@@ -1,4 +1,4 @@
-# KJU
+# Getting started
 
 kju is a serverless, open communication platform that works on a simple `request <-> response` pattern. The KJU Cloud service is based on the open source kju framework. If you'd like to run it on your system, consider installing the framework on premise.
 
