@@ -8,6 +8,8 @@ kju is a serverless, open communication platform that works on a simple `request
 * Any participator can create a request with a number of predefined responses.
 * Any participator can redeem a response for a given request
 
+![kju Sequence](sequence.png)
+
 ## Integrate
 
 Consuming the service can be done via simple HTTP calls, using standard tools, like <u>curl</u>, <u>any http client</u>, <u>web browsers</u> and more
