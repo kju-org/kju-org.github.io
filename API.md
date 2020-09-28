@@ -4,7 +4,7 @@ kju is a serverless, open communication platform that works on a simple `request
 
 ## Integrate
 
-Consuming the service can be done via simple HTTP calls, using standard tools, like <u>curl</u>, <u>any http client</u>, <u>web browsers</u> and more
+> Consuming the service can be done via simple HTTP calls, using standard tools, like <u>curl</u>, <u>any http client</u>, <u>web browsers</u> and more
 
 ## Fundamentals
 
