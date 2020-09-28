@@ -142,3 +142,25 @@ Returns:
 	}
 ]
 ```
+
+## SEE messages
+
+Returns the messages matching a messageTag
+
+> the messageTag is encided inside the token. 
+
+> When opened in the browser, a UI will be rendered.
+
+```
+Endpoint: /api/messages?token=XXX
+Method: GET
+Query Params: token
+Returns:
+[
+	{
+		_id: "auto generated id",
+		content: "content",
+		responses: [...]
+	}
+]
+```
