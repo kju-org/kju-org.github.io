@@ -2,18 +2,43 @@
 
 kju is a serverless, open communication platform that works on a simple `request <-> response` pattern. The KJU Cloud service is based on the open source kju framework. If you'd like to run it on your system, consider installing the framework on premise.
 
+## Integrate
+
+Consuming the service can be done via simple HTTP calls, using standard tools, like <u>curl</u>, <u>any http client</u>, <u>web browsers</u> and more
 
 ## Fundamentals
 
 * Any participator can create a request with a number of predefined responses.
 * Any participator can redeem a response for a given request
+* Message publishers get get details on message responses
 
 ![kju Sequence](sequence.png)
 
-## Integrate
+## Tokens
 
-Consuming the service can be done via simple HTTP calls, using standard tools, like <u>curl</u>, <u>any http client</u>, <u>web browsers</u> and more
+For accessing the service, kju works with tokens. Basically there are two types of tokens:
 
+| Token | Purpose | How to get |
+| ----- | ------------| ---------- |
+| ***createToken*** | Used for creating messages | Can be generated with the `/creationTOken` Endpoint.
+| ***consumerToken*** | Used for redeeming responses for a given message | Will be returned when a message is created |
+
+## Message Anatomy
+
+Messages, when created, can have the following properties:
+
+```json
+{
+	"content": "message content...",
+	"messageTag": "(optional): A tag that can be used for grouping messages on the /messages endpoint",
+	"responses": [
+		{
+			"title": "The title of the response"
+		},
+		"Can be an object, like above, or just a string"
+	]
+}
+```
 
 # API
 
