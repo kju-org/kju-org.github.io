@@ -109,6 +109,22 @@ Returns:
 }
 ```
 
+## DELETE a message
+
+Deletes a message.
+
+> Can only be performend with the same token, that the message was created with!
+
+```
+Endpoint: /api/message/:messageId?token=XXX
+Method: DELETE
+Query Params: token
+Returns:
+{
+	msg: "ok"
+}
+```
+
 ## REDEEM a response
 
 Webhook for redeeming a predefined response for a given message
