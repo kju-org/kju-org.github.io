@@ -1,4 +1,5 @@
 <!-- _navbar.md -->
 
 * [API](#KJU)
-* [Framework](https://github.com/kju-org/kju)
+* [JS Client](https://github.com/kju-org/kju-client)
+* [KJU Framework](https://github.com/kju-org/kju)

@@ -27,7 +27,7 @@ For accessing the service, kju works with tokens. Basically there are two types 
 
 Messages, when created, can have the following properties:
 
-```json
+```javascript
 {
 	"content": "message content...",
 	"messageTag": "(optional): A tag that can be used for grouping messages on the /messages endpoint",
@@ -36,7 +36,8 @@ Messages, when created, can have the following properties:
 			"title": "The title of the response"
 		},
 		"Can be an object, like above, or just a string"
-	]
+	],
+	"reciever": "(optional) email reciever"
 }
 ```
 
@@ -180,3 +181,7 @@ Returns:
 	}
 ]
 ```
+
+# Custom Hosting
+
+If you are looking to host your own KJU environment, you can use the open source [KJU Framework](https://github.com/kju-org/kju).
