@@ -6,6 +6,10 @@ kju is a serverless, open communication platform that works on a simple `request
 
 > Consuming the service can be done via simple HTTP calls, using standard tools, like <u>curl</u>, <u>any http client</u>, <u>web browsers</u> and more
 
+## Custom Hosting
+
+If you are looking to host your own KJU environment, you can use the open source [KJU Framework](https://github.com/kju-org/kju).
+
 ## Fundamentals
 
 * Any participator can create a request with a number of predefined responses.
@@ -181,7 +185,3 @@ Returns:
 	}
 ]
 ```
-
-# Custom Hosting
-
-If you are looking to host your own KJU environment, you can use the open source [KJU Framework](https://github.com/kju-org/kju).
