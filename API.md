@@ -24,7 +24,7 @@ For accessing the service, kju works with tokens. Basically there are two types 
 
 | Token | Purpose | How to get |
 | ----- | ------------| ---------- |
-| ***createToken*** | Used for creating messages | Can be generated with the `/creationTOken` Endpoint.
+| ***personalToken*** | Used for creating messages | Can be generated with the `/personalToken` Endpoint.
 | ***consumerToken*** | Used for redeeming responses for a given message | Will be returned when a message is created |
 
 ## Message Anatomy
@@ -58,11 +58,15 @@ The API (alpha version!) is available under:
 
 ## GET a token
 
-Generates a token for creating a message
+Generates a token for creating a message. The token will be sent to the contact email address.
 
 ```
-Endpoint: /api/creationToken
+Endpoint: /api/personalToken
 Method: POST
+Data:
+{
+	contact: "email"
+}
 Returns:
 {
 	data: "TOKEN"
