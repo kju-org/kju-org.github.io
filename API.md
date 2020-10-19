@@ -98,6 +98,24 @@ Returns:
 }
 ```
 
+## ALLOW correspondence
+
+When a sender adresses a reciever within a message for the first time, the reciever hast to allow further correspondence with that sender. Otherwise, further messages to that reciever will not be delivered.
+
+```
+Endpoint: /api/permitCorrespondence?token=XXX
+Method: POST
+Query Params: token
+Data:
+{
+	contact: "email of sender",
+}
+Returns:
+{
+	msg: "ok"
+}
+```
+
 ## SEE a message
 
 Returns a raw message.
