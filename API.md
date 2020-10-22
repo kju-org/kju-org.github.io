@@ -2,6 +2,8 @@
 
 kju is a serverless, open communication platform that works on a simple `request <-> response` pattern. The KJU Cloud service is based on the open source kju framework. If you'd like to run it on your system, consider installing the framework on premise.
 
+![kju Sequence](kju-flow.png)
+
 ## Integrate
 
 > Consuming the service can be done via simple HTTP calls, using standard tools, like <u>curl</u>, <u>any http client</u>, <u>web browsers</u> and more
@@ -9,14 +11,6 @@ kju is a serverless, open communication platform that works on a simple `request
 ## Custom Hosting
 
 If you are looking to host your own KJU environment, you can use the open source [KJU Framework](https://github.com/kju-org/kju).
-
-## Fundamentals
-
-* Any participator can create a request with a number of predefined responses.
-* Any participator can redeem a response for a given request
-* Message publishers get get details on message responses
-
-![kju Sequence](sequence.png)
 
 ## Tokens
 
